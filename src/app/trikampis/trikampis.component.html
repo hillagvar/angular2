@@ -1,0 +1,12 @@
+<div class="card mt-5">
+    <div class="card-body">
+        <label class="form-label">Įveskite pirmos kraštinės ilgį:</label>
+        <input class="form-control mb-3" type="number" name="a" [(ngModel)]="a">
+        <label class="form-label">Įveskite antros kraštinės ilgį:</label>
+        <input class="form-control mb-3" type="number" name="b" [(ngModel)]="b">
+        <label class="form-label">Įveskite trečios kraštinės ilgį:</label>
+        <input class="form-control mb-3" type="number" name="c" [(ngModel)]="c">
+        <button class="btn btn-primary" (click)="skaiciuok()" [disabled]="a == null || b == null || c == null">Skaičiuoti trikampio plotą</button>
+        <div class="alert alert-info mt-3" *ngIf="plotas != null">Trikampio plotas: {{plotas}}</div>
+    </div>
+</div>
